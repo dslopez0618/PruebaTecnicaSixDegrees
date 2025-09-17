@@ -14,13 +14,13 @@ Esta es una solución multicapa para la prueba técnica, que incluye:
 
 ## Instalación
 1. Clonar el repositorio:
-git clone https://github.com/tu-usuario/PruebaTecnicaSixDegrees.git
+`git clone https://github.com/tu-usuario/PruebaTecnicaSixDegrees.git`
 
 2. Abrir la solución en Visual Studio 2017/2019/2022 (`PruebaTecnica.sln`).
-3. Configura la cadena de conexión ``appsettings.json` (PruebaTecnica.Services):
-"ConnectionStrings": {
+3. Configura la cadena de conexión `appsettings.json` (PruebaTecnica.Services):
+`"ConnectionStrings": {
   "DefaultConnection": "Server=.;Database=PruebaSD;Trusted_Connection=True;TrustServerCertificate=True;"
-}
+}`
 4. Restaure paquetes NuGet y ejecute el backenf (F5)
 5. Navegue a `PruebaTecnica.Presentatio,`, ejecute `npm install`, y luego `ng serve` para el frontend.
 
