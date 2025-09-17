@@ -1,0 +1,49 @@
+<div class="app-container">
+  <!-- Encabezado con ícono -->
+  <header class="header">
+    <i class="fas fa-users"></i> <span>Prueba Técnica Six Degrees</span>
+  </header>
+
+  <main class="main-content">
+    <h2 class="title">Consulta de Usuarios</h2>
+    <button (click)="buscarUsuarios()" class="btn btn-primary" [disabled]="loading">
+      <i *ngIf="loading" class="fas fa-spinner fa-spin"></i> Buscar
+    </button>
+
+    <!-- Mensaje de carga -->
+    <div *ngIf="loading" class="loading-overlay">
+      <div class="loading-text">Cargando usuarios...</div>
+    </div>
+
+    <!-- Tabla de resultados -->
+    <table class="table mt-3" *ngIf="usuarios.length > 0">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios; let i = index" [class.odd-row]="i % 2 === 0">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.nombre }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Mensaje de error -->
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Mensaje si no hay resultados -->
+    <div *ngIf="!loading && usuarios.length === 0 && !errorMessage" class="no-results">
+      No se encontraron usuarios.
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>© 2025 Prueba Técnica - Desarrollado por Daniel Lopez - dslopez0618</p>
+  </footer>
+</div>
