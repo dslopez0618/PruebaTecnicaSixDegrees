@@ -21,10 +21,10 @@ Esta es una solución multicapa para la prueba técnica, que incluye:
 - Crear una base de datos llamada `PruebaSD`:
 ```sql
   CREATE DATABASE PruebaSD;
-
+```
 - Use el siguiente script para crear la tabla `Usuario` y probarla con 5 registros;
 
-``` 
+``` sql
 USE PruebaSD;
 
 CREATE TABLE Usuario (
@@ -38,7 +38,8 @@ INSERT INTO Usuario (nombre, apellido) VALUES
 ('Maria', 'Lopez Gomez'),
 ('Juan', 'Perez Martinez'),
 ('Ana', 'Garcia Torres'),
-('Pedro', 'Sanchez Ruiz');``` 
+('Pedro', 'Sanchez Ruiz');
+```
 
 - Actualizar la cadena de conexión en `appsettings.json` (En `PruebaTecnica.Services`):
 ```
